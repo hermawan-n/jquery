@@ -24,7 +24,9 @@ public class ResizablePage {
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='resizable']/div[3]")));
 
         Actions actions = new Actions(driver);
-        actions.moveToElement(target).clickAndHold().moveByOffset((width- 150), (height-150)).release().perform();
+        actions.dragAndDropBy(target, (width - 150), (height - 150)).build().perform();
+        // actions.moveToElement(target).clickAndHold().moveByOffset((width- 150),
+        // (height-150)).release().perform();
     }
 
     public void validateDragAndDropBy(Integer aWidth, Integer aHeight) {

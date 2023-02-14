@@ -12,8 +12,8 @@ public class StepResizable {
         resizablePage.dragAndDropBy(width, height);
     }
 
-    @And("validate if element height equals {int} and height equals {int}")
-    public void validate_if_element_height_equals_and_height_equals(Integer width, Integer height) {
+    @And("validate if element width equals {int} and height equals {int}")
+    public void validate_if_element_width_equals_and_height_equals(Integer width, Integer height) {
         resizablePage.validateDragAndDropBy(width, height);
     }
 }
