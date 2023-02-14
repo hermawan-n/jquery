@@ -1,5 +1,5 @@
 Feature: to test and validate resizable element
-    @run
+    # @run
     Scenario: successfully validate resizable element
         Given user is on jquery home page
         And user go to "Resizable" page
