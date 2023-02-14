@@ -35,8 +35,8 @@ public class StepDroppable {
         droppablePage.validateDragAndDrop(string);
     }
 
-    @Then("element successfully dropped")
-    public void element_successfully_dropped() {
+    @Then("sceanrio successfully performed")
+    public void sceanrio_successfully_performed() {
         System.out.println("Validation success!");
     }
 }

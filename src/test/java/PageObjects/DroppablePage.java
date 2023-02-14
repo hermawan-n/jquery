@@ -8,7 +8,6 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -25,14 +24,9 @@ public class DroppablePage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement target = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("draggable")));
         WebElement source = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("droppable")));
+
         Actions actions = new Actions(driver);
         actions.dragAndDrop(target, source).build().perform();
-        // Action drag = actions.clickAndHold(target)
-        // .moveToElement(source)
-        // .release(target)
-        // .build();
-
-        // drag.perform();
     }
 
     public void validateDragAndDrop(String text) {
