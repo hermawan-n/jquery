@@ -30,9 +30,9 @@ public class StepDroppable {
         droppablePage.dragAndDrop();
     }
 
-    @When("dropable element have {string} text and yellow background color")
-    public void dropable_element_have_text_and_yellow_background_color(String string) {
-        droppablePage.dragAndDrop();
+    @When("dropable element have {string} as text and yellow background color")
+    public void dropable_element_have_as_text_and_yellow_background_color(String string) {
+        droppablePage.validateDragAndDrop(string);
     }
 
     @Then("element successfully dropped")

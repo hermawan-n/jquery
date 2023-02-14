@@ -8,6 +8,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -23,9 +24,15 @@ public class DroppablePage {
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement target = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("draggable")));
-        WebElement source = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("draggable")));
+        WebElement source = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("droppable")));
         Actions actions = new Actions(driver);
-        actions.dragAndDrop(source, target).perform();
+        actions.dragAndDrop(target, source).build().perform();
+        // Action drag = actions.clickAndHold(target)
+        // .moveToElement(source)
+        // .release(target)
+        // .build();
+
+        // drag.perform();
     }
 
     public void validateDragAndDrop(String text) {
@@ -33,9 +40,10 @@ public class DroppablePage {
         String actualColor = target.getCssValue("background-color");
         String actualText = target.getText();
 
-        String expectedColor = "rgb(255, 250, 144)"; // equivalent to #fffa90
+        String expectedColor = "rgba(255, 250, 144, 1)"; // equivalent to #fffa90
 
         assertTrue(actualColor.equals(expectedColor), "Incorrect color: " + actualColor);
+
         assertEquals(actualText, text, "Incorrect text: " + actualText);
     }
 }
