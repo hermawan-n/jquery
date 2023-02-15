@@ -1,6 +1,6 @@
 Feature: to test and validate selectable element
-    @run
-    Scenario: successfully click multiple element
+    # @run
+    Scenario: successfully reorder item list and validate them
         Given user is on jquery home page
         And user go to "Sortable" page
 
