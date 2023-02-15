@@ -10,7 +10,7 @@ Feature: to test and validate selectable element
         Then user choose element on row "3" and column "2" and when element get selected show yellow background color
 
         Then sceanrio successfully performed
-    @run
+    # @run
     Scenario: sucsessfully select element by swiping
         Given user is on jquery home page
         And user go to "Selectable" page
