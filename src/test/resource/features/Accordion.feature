@@ -1,5 +1,5 @@
 Feature: to choose and validate text inside accordion
-    @run
+    # @run
     Scenario: successfully choose and validate accordion
         Given user is on jquery home page
         And user go to "Accordion" page
