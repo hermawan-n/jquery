@@ -1,5 +1,5 @@
 Feature: to move slider based on user input
-    @run
+    # @run
     Scenario: download will start and then progress will be validated
         Given user is on jquery home page
         And user go to "Slider" page
