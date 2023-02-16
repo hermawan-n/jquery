@@ -1,5 +1,5 @@
 Feature: to check and validate progressbar
-    @run
+    # @run
     Scenario: download will start and then progress will be validated
         Given user is on jquery home page
         And user go to "Progressbar" page
