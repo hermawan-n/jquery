@@ -11,8 +11,8 @@ public class StepCheckboxRadio {
         checkboxradioPage.selectChecboxRadio(string, string2);
     }
 
-    @Then("validate color of {string} on checkbox {string}")
-    public void validate_color_of_on_checkbox(String string, String string2) {
-        checkboxradioPage.validateCheckboxradio(string, string2);
+    @Then("validate color of {string} on checkbox {string} is {string}")
+    public void validate_color_of_on_checkbox_is(String string, String string2, String string3) {
+        checkboxradioPage.validateCheckboxradio(string, string2, string3);
     }
 }

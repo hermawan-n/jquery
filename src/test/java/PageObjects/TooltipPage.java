@@ -37,5 +37,7 @@ public class TooltipPage {
 
         String sTooltip = tooltip.getText();
         assertEquals(text, sTooltip, "Text do not match");
+
+        driver.switchTo().defaultContent();
     }
 }

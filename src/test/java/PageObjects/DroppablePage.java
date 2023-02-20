@@ -39,5 +39,7 @@ public class DroppablePage {
         assertTrue(actualColor.equals(expectedColor), "Incorrect color: " + actualColor);
 
         assertEquals(actualText, text, "Incorrect text: " + actualText);
+
+        driver.switchTo().defaultContent();
     }
 }

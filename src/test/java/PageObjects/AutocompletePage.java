@@ -23,6 +23,7 @@ public class AutocompletePage {
         driver.switchTo().frame(iframe);
 
         WebElement txtBox = driver.findElement(By.xpath("//input[@id='tags']"));
+        txtBox.clear();
         txtBox.sendKeys(text);
 
         driver.switchTo().defaultContent();

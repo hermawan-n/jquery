@@ -43,5 +43,6 @@ public class AccordionPage {
         String actualText = sectionElement.getText();
 
         assertEquals(actualText, text, "Text do not match");
+        driver.switchTo().defaultContent();
     }
 }

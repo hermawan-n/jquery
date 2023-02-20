@@ -46,7 +46,7 @@ public class ProgressbarPage {
         wait2.until(new Function<WebDriver, WebElement>() {
             public WebElement apply(WebDriver driver) {
                 return driver.findElement(
-                        By.xpath("//div[@class='progress-label' and text()='Current Progress: " + percentage1 + "']"));
+                        By.xpath("//div[@class='progress-label' and contains(text(), '" + percentage1 + "'])"));
             }
         });
 
@@ -58,5 +58,6 @@ public class ProgressbarPage {
         boolean t = percenElement.isDisplayed();
         System.out.println(t);
 
+        driver.switchTo().defaultContent();
     }
 }
